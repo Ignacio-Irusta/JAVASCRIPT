@@ -11,6 +11,8 @@ let conthorizon = 0;
 let totalC = 0;
 let totalJ = 0;
 let cof;
+let usuarioGlobal = "Nacho";
+let passGlobal = 123;
 
 class videojuego{
 
@@ -28,33 +30,39 @@ class videojuego{
     }
 }
 
-primera();
+function validar(){
+    let usuario = document.getElementById("nombreUsuario");
+    let pass = document.getElementById("passUsuario");
+    let mensaje = document.getElementById("mensaje");
 
-function primera() {
-  let usuario = prompt("Ingrese su nombre de usuario");
-  let pass = prompt("Ingrese su Contraseña");
+    if( usuario.value == "Nacho" && pass.value == "123" ){
 
-  let confirmusuario = usuario;
-  let confirmpass = pass;
+            console.log("Bienvenido/a a mi sistema");
+            let parrafo = document.createElement("p");
+            parrafo.innerHTML = "Bienvenido a GameARG Nacho";
+            parrafo.style.color = "red";
+            parrafo.style.fontSize = "40px";
+        
 
-  for (let i = 0; i <= 2; i++) {
-    let usuario2 = prompt("Confirme su Usuario");
-    let pass2 = prompt("Confirmar su Contraseña");
+            mensaje.appendChild(parrafo);
 
-    let j = 3;
 
-    if (confirmusuario === usuario2 && confirmpass === pass2) {
-      alert("Bienvenido " + usuario2 + " Disfrute sus compras.");
-      cof = true;
-      break;
-    } else {
-      alert("Usuario o Contraseña incorrecta, tiene: " + (j - 1) + " intentos");
+
     }
-  }
-  return cof;
-}
+    else{
 
-if (cof == true) {
+        console.log("Usuario incorrecto");
+    }
+    
+    
+    console.log( usuario.value);
+    console.log(pass.value);
+
+
+}
+//
+
+//Tengo que hacer una seccion de imagenes y ponerle un boton para agregar a la lista de compras.
   console.log("Tenemos 3 generos de juegos: Shooter, Survival y Deportivo.");
   let catalogo = prompt(
       "Ingrese el genero para ver el catalogo o ESC para salir: "
@@ -136,7 +144,7 @@ if (cof == true) {
         console.log("En la categoria de deportes tenemos: ");
         console.log("Fifa 2022: ARS$ 5,499");
         console.log("NBA2K 2022: ARS$ 4,019");
-        console.log("Forza Horizon 4: ARS$ 3,599");
+        console.log("Forza Horizon 5: ARS$ 3,599");
         let eleccion3 = prompt(
           "Elija uno para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero."
         );
@@ -152,9 +160,9 @@ if (cof == true) {
             array2 = "NBA2k 2022";
             arrays.push(array2);
             totalC = totalC + 4019;
-          } else if (eleccion3 == "Forza Horizon 4") {
+          } else if (eleccion3 == "Forza Horizon 5") {
             conthorizon = conthorizon + 1;
-            array2 = "Forza Horizon 4";
+            array2 = "Forza Horizon 5";
             arrays.push(array2);
             totalC = totalC + 3599;
           } else {
@@ -174,9 +182,11 @@ if (cof == true) {
       );
     }
   }
-}
 
 let importeiva = new videojuego(totalC);
+
+
+//tengo que usar document para que me muestre los resultados entre otras cosas.
 
 tercera();
 

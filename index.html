@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="./css/ionicons.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
 </head>
-<body>
-	<script src="./index.js"></script>
+<body class="bod">
 	<header>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <div class="container-fluid">
@@ -28,24 +27,74 @@
               <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Catalogo</a>
+                    <input type="text" placeholder="Ingrese Usuario..." class="nav-link bot" id="nombreUsuario">
+                  </li>
+                  <li>
+                    <input type="text" placeholder="Ingrese Password..." class="nav-link bot" id="passUsuario">
                   </li>
                 </ul>
+                <button onclick="validar()" class="btn btn-danger bot">Enviar</button>
               </div>
             </div>
           </nav>
     </header>
 	<main>
     <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6 text-center">
-            <p>Le damos la bienvenida a GameARG, aqui podras encontrar diferentes juegos y generos
-				a moneda argentina. Registrate y podras comprar.
-			</p>
-			<p>A continuacion podras ver nuestro catalogo de juegos y sus precios. Añada al carrito 
-				y cuando termine proceda a comprar.
-			</p>
+        <div class="container">
+          <div class="text-center" id="mensaje">
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-9 text-center">
+              <div>
+                <img src="./images/call-of-duty.webp" class="espa" width="400" height="400" alt="Call of Duty: Black Ops 3">
+                <p>Precio de Call of Duty: Black Ops 3: ARS$ 999</p>
+                <button type="submit" class="btn btn-danger">Comprar</button>
+              </div>
+              <div>
+                <img src="./images/counter.webp" class="espa" width="400" height="400" alt="Counter Strike: Global Ofensive">
+                <p>Precio de Counter Strike: Global Ofensive: ARS$ 759</p>
+                <button type="submit" class="btn btn-danger">Comprar</button>
+              </div>
+              <div>
+                <img src="./images/red-dead.jpg" class="espa espa2" width="400" height="400" alt="Red Dead Redemption II">
+                <p>Precio de Red Dead Redemption II: ARS$ 2,499</p>
+                <button type="submit" class="btn btn-danger espa2">Comprar</button>
+              </div>
+            </div>
+            <div class="col-md-9 text-center">
+              <div>
+                <img src="./images/day-z.jpg" class="espa" width="400" height="400" alt="Day Z">
+                <p>Precio de Day Z: ARS$ 1,999</p>
+                <button type="submit" class="btn btn-danger espa2">Comprar</button>
+              </div>
+              <div>
+                <img src="./images/forest.webp" class="espa" width="400" height="400" alt="The Forest">
+                <p>Precio de The Forest: ARS$ 224</p>
+                <button type="submit" class="btn btn-danger">Comprar</button>
+              </div>
+              <div>
+                <img src="./images/rust.webp" class="espa espa2" width="400" height="400" alt="Rust">
+                <p>Precio de Rust: ARS$ 2,440</p>
+                <button type="submit" class="btn btn-danger espa2">Comprar</button>
+              </div>
+            </div>
+            <div class="col-md-9 text-center">
+              <div>
+                <img src="./images/fifa.jpg" class="espa" width="400" height="400" alt="Fife 2022">
+                <p>Precio de Fifa 2022: ARS$ 5,499</p>
+                <button type="submit" class="btn btn-danger">Comprar</button>
+              </div>
+              <div>
+                <img src="./images/nba.webp" class="espa" width="400" height="400" alt="NBA2K 2022">
+                <p>Precio de NBA2K 2022: ARS$ 4,019</p>
+                <button type="submit" class="btn btn-danger">Comprar</button>
+              </div>
+              <div>
+                <img src="./images/forzahorizon.jpg" class="espa espa2" width="400" height="400" alt="Forza Horizon 5">
+                <p>Precio de Forza Horizon 5: ARS$ 3,599</p>
+                <button type="submit" class="btn btn-danger espa2">Comprar</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -211,6 +260,7 @@
       </div>
     </footer>
 
+    <script src="./index.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.js"></script>
     <script src="./js/bootstrap.min.js"></script>
