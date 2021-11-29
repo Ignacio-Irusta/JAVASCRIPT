@@ -35,23 +35,27 @@ function validar(){
     let pass = document.getElementById("passUsuario");
     let mensaje = document.getElementById("mensaje");
 
+    let input = document.getElementById("nombreUsuario");
+    let input2 = document.getElementById("passUsuario");
+
     if( usuario.value == "Nacho" && pass.value == "123" ){
 
             console.log("Bienvenido/a a mi sistema");
             let parrafo = document.createElement("p");
             parrafo.innerHTML = "Bienvenido a GameARG Nacho";
-            parrafo.style.color = "red";
+            parrafo.style.color = "green";
             parrafo.style.fontSize = "40px";
         
-
             mensaje.appendChild(parrafo);
 
 
 
     }
     else{
-
+        input.style.border = "1px solid #ff0000";
+        input2.style.border = "1px solid #ff0000";
         console.log("Usuario incorrecto");
+
     }
     
     
@@ -60,7 +64,12 @@ function validar(){
 
 
 }
-//
+
+let boton = document.getElementsByClassName("btn");
+for (botones of boton){
+        botones.addEventListener("click" , function(){
+});
+}
 
 //Tengo que hacer una seccion de imagenes y ponerle un boton para agregar a la lista de compras.
   console.log("Tenemos 3 generos de juegos: Shooter, Survival y Deportivo.");
@@ -187,6 +196,45 @@ let importeiva = new videojuego(totalC);
 
 
 //tengo que usar document para que me muestre los resultados entre otras cosas.
+
+let botonesCompra = document.querySelectorAll(".botonCompra");
+let carrito = [];
+
+
+
+for( let boton of botonesCompra){
+
+    boton.addEventListener("click" , agregarCarrito);
+
+}
+
+
+console.log(botonesCompra);
+
+
+
+function agregarCarrito(e){
+
+    console.log(e.target);
+    let hijo = e.target;
+    let padre = hijo.parentNode.parentNode;
+    let titulo = padre.querySelector("h5").textContent;
+    let parrafo = padre.querySelector("p").textContent;
+    let imagen = padre.querySelector("img").src;
+
+
+    let producto = {
+        nombre: titulo,
+        desc:parrafo,
+        img: imagen
+    };
+
+
+    carrito.push(producto)
+    console.log(padre);
+    console.log(titulo);
+
+}
 
 tercera();
 
