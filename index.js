@@ -1,34 +1,8 @@
-let arrays = [];
-let contred = 0;
-let contcall = 0;
-let contcsgo = 0;
-let contrust = 0;
-let contforest = 0;
-let contday = 0;
-let contfifa = 0;
-let contnba = 0;
-let conthorizon = 0;
-let totalC = 0;
-let totalJ = 0;
-let cof;
+
+//LOGIN
+
 let usuarioGlobal = "Nacho";
 let passGlobal = 123;
-
-class videojuego{
-
-    constructor(precio){
-
-    this.precio = precio;
-
-    }
-
-    preciofinal(){
-
-        let iva = this.precio * 0.21;
-        return this.precio + iva;
-
-    }
-}
 
 function validar(){
     let usuario = document.getElementById("nombreUsuario");
@@ -65,13 +39,83 @@ function validar(){
 
 }
 
-let boton = document.getElementsByClassName("btn");
-for (botones of boton){
+let botons = document.getElementsByClassName("btn");
+for (botones of botons){
         botones.addEventListener("click" , function(){
 });
 }
 
-//Tengo que hacer una seccion de imagenes y ponerle un boton para agregar a la lista de compras.
+// CARITO de COMPRAS
+
+let botonesCompra = document.querySelectorAll(".botonCompra");
+let carrito = [];
+
+
+
+for( let boton of botonesCompra){
+
+    boton.addEventListener("click" , agregarCarrito);
+
+}
+
+
+console.log(botonesCompra);
+
+
+
+function agregarCarrito(e){
+
+    console.log(e.target);
+    let hijo = e.target;
+    let padre = hijo.parentNode.parentNode;
+    let titulo = padre.querySelector("h5").textContent;
+    let parraf = padre.querySelector("p").textContent;
+    let imagen = padre.querySelector("img").src;
+
+
+    let producto = {
+        nombre: titulo,
+        desc:parraf,
+        img: imagen
+    };
+
+
+    carrito.push(producto)
+    console.log(padre);
+    console.log(titulo);
+}
+
+/*
+
+let arrays = [];
+let contred = 0;
+let contcall = 0;
+let contcsgo = 0;
+let contrust = 0;
+let contforest = 0;
+let contday = 0;
+let contfifa = 0;
+let contnba = 0;
+let conthorizon = 0;
+let totalC = 0;
+let totalJ = 0;
+let cof;
+
+class videojuego{
+
+    constructor(precio){
+
+    this.precio = precio;
+
+    }
+
+    preciofinal(){
+
+        let iva = this.precio * 0.21;
+        return this.precio + iva;
+
+    }
+}
   console.log("Tenemos 3 generos de juegos: Shooter, Survival y Deportivo.");
   let catalogo = prompt(
       "Ingrese el genero para ver el catalogo o ESC para salir: "
@@ -192,51 +236,9 @@ for (botones of boton){
     }
   }
 
-let importeiva = new videojuego(totalC);
+let importeiva = new videojuego(totalC);*/
 
-
-//tengo que usar document para que me muestre los resultados entre otras cosas.
-
-let botonesCompra = document.querySelectorAll(".botonCompra");
-let carrito = [];
-
-
-
-for( let boton of botonesCompra){
-
-    boton.addEventListener("click" , agregarCarrito);
-
-}
-
-
-console.log(botonesCompra);
-
-
-
-function agregarCarrito(e){
-
-    console.log(e.target);
-    let hijo = e.target;
-    let padre = hijo.parentNode.parentNode;
-    let titulo = padre.querySelector("h5").textContent;
-    let parrafo = padre.querySelector("p").textContent;
-    let imagen = padre.querySelector("img").src;
-
-
-    let producto = {
-        nombre: titulo,
-        desc:parrafo,
-        img: imagen
-    };
-
-
-    carrito.push(producto)
-    console.log(padre);
-    console.log(titulo);
-
-}
-
-tercera();
+/*tercera();
 
 function tercera() {
   totalJ =
@@ -253,4 +255,4 @@ function tercera() {
   console.log("Los juegos en su carritos son los siguientes: " + arrays.sort());
   console.log("El importe a pagar mas el IVA(21%) es: " + importeiva.preciofinal());
   console.log("Gracias por su compra.");
-}
+}*/
