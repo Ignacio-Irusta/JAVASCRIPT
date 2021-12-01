@@ -12,6 +12,10 @@
   margin-bottom: 2rem;
 }
 
+  .espa3{
+  margin-bottom: 6rem;
+  background: white;
+}
  .bot {
    margin-left: 2rem;
  }
@@ -2141,8 +2145,8 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745; }
+  background-color: #5126a7;
+  border-color: #5126a7; }
   .btn-success:hover {
     color: #fff;
     background-color: #218838;
