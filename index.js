@@ -1,13 +1,15 @@
 
 //LOGIN
 
-let usuarioGlobal = "Nacho";
-let passGlobal = 123;
 
 function validar(){
     let usuario = document.getElementById("nombreUsuario");
     let pass = document.getElementById("passUsuario");
     let mensaje = document.getElementById("mensaje");
+    
+    localStorage.setItem("UsuarioLocal" , usuario);
+    localStorage.setItem("passLocal" , pass );
+
 
     let input = document.getElementById("nombreUsuario");
     let input2 = document.getElementById("passUsuario");
@@ -31,11 +33,6 @@ function validar(){
         console.log("Usuario incorrecto");
 
     }
-    
-    
-    console.log( usuario.value);
-    console.log(pass.value);
-
 
 }
 
@@ -48,7 +45,7 @@ for (botones of botons){
 // CARITO de COMPRAS
 
 let botonesCompra = document.querySelectorAll(".botonCompra");
-let carrito = [];
+//let carrito = [];
 
 
 for( let boton of botonesCompra){
