@@ -166,4 +166,21 @@ function comprarButtonClick() {
   carritoCartCONTAINER.innerHTML = '';
   actualizarTotal();
 }
+
+/*
+Aplicando JQUERY al proyecto.
+Funcion que esconde el carrito, lo muestra cuando se compra.
+*/
+
+$(function(){
+
+  $(".Jqry").hide();
+
+  $(".espa2").click(function(){
+
+    $(".Jqry").show();
+
+  })
+
+});
 //--
