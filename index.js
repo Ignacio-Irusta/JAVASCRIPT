@@ -1,7 +1,6 @@
 
 //LOGIN
 
-
 function validar(){
     let usuario = document.getElementById("nombreUsuario");
     let pass = document.getElementById("passUsuario");
@@ -172,15 +171,29 @@ Aplicando JQUERY al proyecto.
 Funcion que esconde el carrito, lo muestra cuando se compra.
 */
 
-$(function(){
+$(document).ready(function(){
+
+    $(".Jqry").fadeOut(2000);
+
+  $(".espa2").click(function(){
+
+    $(".Jqry").fadeIn(2000);
+    
+  });
+});
+
+
+/*$(function(){
 
   $(".Jqry").hide();
 
   $(".espa2").click(function(){
 
+
     $(".Jqry").show();
 
   })
 
-});
+});*/
+
 //--

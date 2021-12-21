@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/ionicons.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="bod">
 	<header>
@@ -34,14 +35,15 @@
                     <input type="text" placeholder="Ingrese Password..." class="nav-link bot" id="passUsuario">
                   </li>
                 </ul>
-                <button onclick="validar()" class="btn btn-danger bot">Enviar</button>
+                <button onclick="validar()" class="btn btn-danger bot" id="animation">Enviar</button>
               </div>
             </div>
           </nav>
     </header>
 	<main>
-    <section class="ftco-section">
+    <section class="ftco-section prue">
         <div class="container">
+
           <div class="text-center" id="mensaje">
           </div>
           <div class="row justify-content-center">
@@ -153,7 +155,7 @@
         </div>
     </section>
 
-    <section class="shopping-cart Jqry">
+    <section class="shopping-cart Jqry" id="algo2">
       <div class="container espa3">
           <h1 class="text-center">CARRITO</h1>
           <hr>
@@ -221,7 +223,7 @@
                           <p>Pronto recibirá su pedido</p>
                       </div>
                       <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-secondary" id="algo" data-dismiss="modal">Cerrar</button>
                       </div>
                   </div>
               </div>
