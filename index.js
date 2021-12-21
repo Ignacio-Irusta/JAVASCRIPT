@@ -1,6 +1,20 @@
 
 //LOGIN
 
+//PROBLEMAS CON ESTO
+$(document).ready(function(){
+
+  $(".bot").click(function(){
+    $.get("texto.txt", function(data, status){
+
+      alert("Data: " + data + "\nStatus: " + status);
+
+    });
+  });
+
+});
+//
+
 function validar(){
     let usuario = document.getElementById("nombreUsuario");
     let pass = document.getElementById("passUsuario");
@@ -14,8 +28,6 @@ function validar(){
     let input2 = document.getElementById("passUsuario");
 
     if( usuario.value == "Nacho" && pass.value == "123" ){
-
-            console.log("Bienvenido/a a mi sistema");
             let parrafo = document.createElement("p");
             parrafo.innerHTML = "Bienvenido a GameARG Nacho";
             parrafo.style.color = "green";
@@ -29,7 +41,7 @@ function validar(){
     else{
         input.style.border = "1px solid #ff0000";
         input2.style.border = "1px solid #ff0000";
-        console.log("Usuario incorrecto");
+        alert("Usuario incorrecto");
 
     }
 
@@ -171,6 +183,7 @@ Aplicando JQUERY al proyecto.
 Funcion que esconde el carrito, lo muestra cuando se compra.
 */
 
+//PROBLEMAS Y GANAS DE MORIR, aca remplaze la funcion de abajo, por esta animacion del jqry
 $(document).ready(function(){
 
     $(".Jqry").fadeOut(2000);
@@ -178,7 +191,7 @@ $(document).ready(function(){
   $(".espa2").click(function(){
 
     $(".Jqry").fadeIn(2000);
-    
+
   });
 });
 
