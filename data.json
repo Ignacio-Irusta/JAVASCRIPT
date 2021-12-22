@@ -1,0 +1,12 @@
+[
+    {
+        "nombre": "Dota 2",
+        "precio": "500",
+        "imagen": "./images/red-dead.jpg"
+    },
+    {
+        "nombre": "mario",
+        "precio": "200",
+        "imagen": "./images/counter.webp"
+    }
+]

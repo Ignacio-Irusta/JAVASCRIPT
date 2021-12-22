@@ -2,18 +2,33 @@
 //LOGIN
 
 //PROBLEMAS CON ESTO
-$(document).ready(function(){
-
+/*$(document).ready(function(){
+const url = "./texto.txt"
+console.log(url);
   $(".bot").click(function(){
-    $.get("texto.txt", function(data, status){
-
-      alert("Data: " + data + "\nStatus: " + status);
+    $.get(url, function(prueba){
+      console.log(prueba);
+      //alert("Data: " + data + "\nStatus: " + status);
 
     });
   });
 
-});
-//
+});*/
+
+//Probe de esta manera tambien pero me tira lo del CORS
+
+document.addEventListener("DOMContentLoaded",db);
+function db(){
+  const url = "./data.json";
+  fetch(url)
+  .then(respuesta => respuesta.json())
+  .then(resultado => {
+    console.log(resultado);
+  })
+}
+
+/////////////////////////////////////
+
 
 function validar(){
     let usuario = document.getElementById("nombreUsuario");
@@ -182,8 +197,6 @@ function comprarButtonClick() {
 Aplicando JQUERY al proyecto.
 Funcion que esconde el carrito, lo muestra cuando se compra.
 */
-
-//PROBLEMAS Y GANAS DE MORIR, aca remplaze la funcion de abajo, por esta animacion del jqry
 $(document).ready(function(){
 
     $(".Jqry").fadeOut(2000);
@@ -194,6 +207,7 @@ $(document).ready(function(){
 
   });
 });
+
 
 
 /*$(function(){
