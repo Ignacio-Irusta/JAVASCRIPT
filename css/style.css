@@ -5,6 +5,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+ #mensaje{
+   color: red;
+   font-size: 30px;
+ }
+
  .espa{
    margin-top: 2rem;
  }

@@ -17,7 +17,7 @@ console.log(url);
 
 //Probe de esta manera tambien pero me tira lo del CORS
 
-document.addEventListener("DOMContentLoaded",db);
+/*document.addEventListener("DOMContentLoaded",db);
 function db(){
   const url = "./data.json";
   fetch(url)
@@ -25,9 +25,32 @@ function db(){
   .then(resultado => {
     console.log(resultado);
   })
-}
+}*/
 
 /////////////////////////////////////
+
+let urlclima = "http://api.openweathermap.org/data/2.5/weather?q=Cordoba&appid=bbf8893c6e8030e157bb633d11a66e17"
+
+
+$('#bottonajax').click(function(){
+  $.get( urlclima , function(respuesta){
+
+    console.log(respuesta);
+    
+    let contenido  = `
+          <div>
+          <h2>${respuesta.name}</h2>
+          <p>Clima: ${respuesta.weather[0].description}</p>
+          <p>Temp max: ${respuesta.main.temp_max}</p>
+          <p>Temp min: ${respuesta.main.temp_min}</p>
+          </div>
+          `
+          
+        $('#mensaje').append(contenido);
+  });
+});
+
+
 
 
 function validar(){
@@ -42,7 +65,7 @@ function validar(){
     let input = document.getElementById("nombreUsuario");
     let input2 = document.getElementById("passUsuario");
 
-    if( usuario.value == "Nacho" && pass.value == "123" ){
+    if( usuario.value == "nacho" && pass.value == "123" ){
             let parrafo = document.createElement("p");
             parrafo.innerHTML = "Bienvenido a GameARG Nacho";
             parrafo.style.color = "green";
