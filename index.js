@@ -1,32 +1,3 @@
-
-//LOGIN
-
-//PROBLEMAS CON ESTO
-/*$(document).ready(function(){
-const url = "./texto.txt"
-console.log(url);
-  $(".bot").click(function(){
-    $.get(url, function(prueba){
-      console.log(prueba);
-      //alert("Data: " + data + "\nStatus: " + status);
-
-    });
-  });
-
-});*/
-
-//Probe de esta manera tambien pero me tira lo del CORS
-
-/*document.addEventListener("DOMContentLoaded",db);
-function db(){
-  const url = "./data.json";
-  fetch(url)
-  .then(respuesta => respuesta.json())
-  .then(resultado => {
-    console.log(resultado);
-  })
-}*/
-
 /////////////////////////////////////
 
 let urlclima = "http://api.openweathermap.org/data/2.5/weather?q=Cordoba&appid=bbf8893c6e8030e157bb633d11a66e17"
@@ -51,7 +22,7 @@ $('#bottonajax').click(function(){
 });
 
 
-
+//LOGIN
 
 function validar(){
     let usuario = document.getElementById("nombreUsuario");
